@@ -299,19 +299,7 @@ begin
 				ReadA		<= Instruct(25 downto 21);
 				ReadB		<= Instruct(20 downto 16);
 			end if;
-			if(Instruct(5 downto 0)= "000000") then		--srl
-				ALUSrc		<= '0';
-				ALUCtrl		<= "1000";
-				ShiftSize	<= Instruct(10 downto 6);
-				RegWr		<= '1';
-		   		DMemWr 		<= '0';
-				load		<= '0';
-				ExtendCtrl	<= '0';
-				ShiftContrl	<= "01";
-				RegWrAddr	<= Instruct(15 downto 11);
-				ReadA		<= Instruct(25 downto 21);
-				ReadB		<= Instruct(20 downto 16);
-			end if;
+			
 			if(Instruct(5 downto 0)= "000100") then		--sllv
 				ALUSrc		<= '0';
 				ALUCtrl		<= "1000";
