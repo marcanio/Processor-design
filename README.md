@@ -1,4 +1,8 @@
 # Processor-design
+This was built with Benjammin Pierre and Thomas Beckler
+
+Pipelined CPU- This a pipelined proccessor that runs MIPS assembly code. Below is a picture of the CPU.
+![Pipeline CPU](https://drive.google.com/file/d/1JOudHVQJX6Qg6ZB94oAM_jL_5X7yMfHV/view?usp=sharing)
 
 Learning VHDL - Is basic VHDL programs in order to get used to the syntax
 
