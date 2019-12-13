@@ -1,0 +1,27 @@
+We dont flush jr out because we flush the idex regiser but jr happenes in the id stage
+
+Tried to change it by notting with s_IDEX FLUSH but this is bad because jreg sets idexflush to 1. Need to make sure we aren't right after a jump.
+
+s_JregCtrlOut(i) <= ((( s_JumpMuxOut(i) and ((not s_JregCtrl) or s_IDEXControlSigsO(30))) or ( s_RegToA(i) and (s_JregCtrl and not s_IDEXControlSigsO(30))))and not iRST);
+
+addi $7, $0, 2
+
+
+addi $6, $6, 1
+--s
+bne $6, $7, loop
+--flush
+addi $6, $6, 1
+==s
+bne $6, $7, loop
+
+
+
+
+
+					 s_IDEXextenMux  when others; why tho
+					 
+					 
+					 
+or (s_MEMWBwrAddr = IFIDrt and IFIDImmCtrl ='1' and s_MEMWBwrAddr/="00000" and IType ='0')
+or (s_MEMWBwrAddr = IFIDrs and IFIDImmCtrl ='1' and s_MEMWBwrAddr/="00000"and IType ='1')
