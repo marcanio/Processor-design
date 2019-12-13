@@ -4,6 +4,9 @@ This was built with Benjammin Pierre and Thomas Beckler
 Pipelined CPU- This a pipelined proccessor that runs MIPS assembly code.
 ![Pipeline CPU](Pipeline.png)
 
+Single cycle CPU- Was the first proccessor we built and was able to take in oen instruction at a time.
+![Single Cycle CPU](SingleCyle.png)
+
 Learning VHDL - Is basic VHDL programs in order to get used to the syntax
 
 Simple ALU - The top level of this program is the "AddSub". It is an adder and subtractor built into one.
